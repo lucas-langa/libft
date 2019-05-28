@@ -22,6 +22,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	if (len_dst > dstsize)
 		return (dstsize + src_len);
 	if (len_dst < dstsize)
-		ft_strncat((dst + len_dst), src, (dstsize - len_dst - 1));
+		ft_strncat(dst, src, (dstsize - len_dst - 1));
+	/* wtf was this dst+len_dst thing, coz strncat checks the length of dst?	*/
 	return (len_dst + src_len);
 }
